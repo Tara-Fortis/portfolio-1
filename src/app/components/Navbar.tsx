@@ -4,9 +4,13 @@ import Link from "next/link";
 
 export default function Navbar() {
     return (
-        <nav>
-            <ul>
-                <li><Link href="/"><h1>Portfolio</h1></Link></li>
+        <nav >
+            <h1 className="brand">
+                <Link href="/">
+                    Portfolio
+                </Link>
+            </h1>
+            <ul className="navbar">
                 <li><Link href="/bio">Bio</Link></li>
                 <li><Link href="/contact">Contact</Link></li>
                 <li><Link href="/projects">Projects</Link></li>
