@@ -1,1 +1,0 @@
-// A Bio page (or About Me page). A recent Image of you and a short paragraph that outlines your personal mission. 

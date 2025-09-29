@@ -1,1 +1,0 @@
-// A Projects page. Include details (text and images) of at least three of your favourite projects. 
