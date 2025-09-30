@@ -45,6 +45,30 @@ main {
   text-align: center;
 }
 
+.about:link {
+  color:#211431;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.about:visited {
+  color:#5e4b56;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.about:hover, .about:focus {
+  color:#374151;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.about:active {
+  color: purple;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 .project-image {
   padding: 0.5rem;
   width: 500px;
