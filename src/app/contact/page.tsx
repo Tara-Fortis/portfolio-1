@@ -1,12 +1,57 @@
+'use client';
+import { useState } from "react";
 import React from 'react';
 
-const ContactPage = () => {
+export default function Contact() {
+    const [name, setName] = useState<string>('');
+    const [email, setEmail] = useState<string>('');
+    const [message, setMessage] = useState<string>('');
+    const [confirmation, setConfirmation] = useState<string>('');
+
+    // watch input and update state var as input value changes for each input element
+    // name
+    const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setName(event.target.value);
+    }
+    // email
+    const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setEmail(event.target.value);
+    }
+    // message
+    const handleMessageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setMessage(event.target.value);
+    }
+
+    // show confirmation when button clicked
+    const handleSubmit = () => {
+        setConfirmation(`Thank you ${name} for your submission. Your message: ${message}`);
+    }
     return (
         <main>
-            <h1>Contact form</h1>
-            <p>A Contact page. Include a short form that asks the user for their contact information (e.g. Full Name, Contact Number and Short Message). When the user clicks on the Submit button, the form will show a confirmation of the form values submitted, then take the user back to the Bio Page. </p>
+                <form action="#" method="post" className="w-full max-w-lg">
+                    <legend>
+                        <h1>Contact Information</h1>
+                    </legend>
+                    <fieldset>
+                        {/* Name field */}
+                        <label htmlFor="name" className="custom-label">
+                            Name
+                        </label>
+                        <input type="text" value={name} onChange={handleNameChange} id="name" className="custom-input" required />
+
+                        {/* Email field */}
+                        <label htmlFor="email" className="custom-label">
+                            Email
+                        </label>
+                        <input type="email" value={email} id="email" onChange={handleEmailChange} className="custom-input" />
+
+                        {/* Message field */}
+                        <label htmlFor="message" className="custom-label">Message</label>
+                        <input type="textarea" value={message} id="message" onChange={handleMessageChange} className="custom-input" required />
+                    </fieldset>
+                    <button onClick={handleSubmit}>Submit</button>
+                </form>
+                <p>{confirmation}</p>
         </main>
     );
-};
-
-export default ContactPage;
+}
