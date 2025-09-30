@@ -25,6 +25,12 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
 
 main {
   padding: 25px;
@@ -32,6 +38,24 @@ main {
 
 .container {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: baseline;
+  text-align: center;
+}
+
+.project-image {
+  padding: 0.5rem;
+  width: 500px;
+  height: autox;
+}
+
+.project {
+  display: grid;
+}
+.project >li {
+  grid-area: 1fr;
 }
 
 /* Typography */
@@ -46,6 +70,7 @@ h3 {
   font-weight: bold;
   margin-bottom: 5px;
   font-size: large;
+  margin-top: 1em;
 }
 
 .brand {
@@ -82,8 +107,6 @@ nav {
   display: flex;
   justify-content: center;
   padding: 0.5rem;
-  position: absolute;
-  bottom: 0;
   width: 100%;
 }
 

@@ -4,8 +4,8 @@ import Image from 'next/image';
 const SkillsPage = () => {
     return (
         <main>
-            <h1>My Skills</h1>
-            <ul>
+            <h1 className="container content-center">My Skills</h1>
+            <ul className="container">
                 <li>
                     <Image
                         src="/html.svg"

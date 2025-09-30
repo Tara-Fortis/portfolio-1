@@ -8,8 +8,8 @@ const BioPage = () => {
                 src="/portfolio-photo.jpeg"
                 alt="Photo of Tineil"
                 className="photo"
-                width={400}
-                height={400}/>
+                width={371}
+                height={371}/>
             <h1>About Me</h1>
             <p>I&apos;m a student webdeveloper currently studying Interactive Media Design at Georgian College. I&apos;m passionate about building dynamic, user-centred web experiences that blend clean code with thoughtful design.</p>
             <h2>Mission</h2>
