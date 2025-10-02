@@ -25,6 +25,7 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
 body {
   min-height: 100vh;
   margin: 0;
@@ -34,6 +35,20 @@ body {
 
 main {
   padding: 25px;
+}
+
+.link:link,
+.link:visited {
+  color: #d3d3d3
+}
+
+.link:hover,
+.link:focus {
+  color: #a690a4;
+}
+
+.link:active {
+  color: #800080;
 }
 
 .container {
@@ -46,19 +61,20 @@ main {
 }
 
 .about:link {
-  color:#211431;
+  color: #211431;
   font-weight: bold;
   text-decoration: underline;
 }
 
 .about:visited {
-  color:#5e4b56;
+  color: #5e4b56;
   font-weight: bold;
   text-decoration: underline;
 }
 
-.about:hover, .about:focus {
-  color:#374151;
+.about:hover,
+.about:focus {
+  color: #374151;
   font-weight: bold;
   text-decoration: underline;
 }
@@ -78,7 +94,8 @@ main {
 .project {
   display: grid;
 }
-.project >li {
+
+.project>li {
   grid-area: 1fr;
 }
 

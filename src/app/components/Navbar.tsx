@@ -17,10 +17,10 @@ export default function Navbar() {
                 </Link>
             </h1>
             <ul className="navbar">
-                <li><Link href="/bio">About</Link></li>
-                <li><Link href="/contact">Contact</Link></li>
-                <li><Link href="/projects">Projects</Link></li>
-                <li><Link href="/skills">Skills</Link></li>
+                <li><Link href="/bio" className="link">About</Link></li>
+                <li><Link href="/contact" className="link">Contact</Link></li>
+                <li><Link href="/projects" className="link">Projects</Link></li>
+                <li><Link href="/skills" className="link">Skills</Link></li>
             </ul>
         </nav>
     );
