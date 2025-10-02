@@ -215,6 +215,26 @@ button:focus {
   box-shadow: 0 0 0 3px rgba(107, 114, 128, 0.3);
 }
 
+.grid-lyt{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: 
+    "form confirm"
+    "form confirm";
+  column-gap: 1rem;
+}
+
+
+fieldset {
+  grid-area: form;
+}
+.confirm {
+  grid-area: confirm;
+}
+
+
+
 fieldset {
   width: 100%;
   padding-left: 0.75rem;
