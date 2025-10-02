@@ -6,6 +6,15 @@ export default function Footer() {
         <footer>
             <ul className="footbar">
                 <li>
+                    <Image
+                        src="/name.svg"
+                        alt="stylized text that reads: tinedev"
+                        width={300}
+                        height={51}
+                        className="lnlogo"
+                    />
+                </li>
+                <li>
                     <Link href="https://www.linkedin.com/in/tineil-armstrong-b270957b/">
                         <Image
                             src="/In.png"

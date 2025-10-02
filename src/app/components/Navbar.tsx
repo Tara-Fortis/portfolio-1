@@ -1,13 +1,19 @@
 'use client';
 
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
     return (
         <nav >
             <h1 className="brand">
                 <Link href="/">
-                    Tineil Armstrong
+                    <Image
+                        src="/tinedev.svg"
+                        width={300}
+                        height={47}
+                        alt="Brand logo, a stylized outline representing a brain with text that spells 'tinedev'"
+                    />
                 </Link>
             </h1>
             <ul className="navbar">
