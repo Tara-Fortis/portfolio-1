@@ -11,6 +11,9 @@ import Footer from "./components/Footer";
 export const metadata: Metadata = {
   title: "COMP2112 | Tineil Armstrong",
   description: "Portfolio for Tineil Armstrong",
+  icons: {
+    icon: "brain.svg",
+  }
 };
 
 export default function RootLayout({
@@ -25,8 +28,6 @@ export default function RootLayout({
         {children}
         <Footer />
       </body>
-
     </html>
-
   );
 }
