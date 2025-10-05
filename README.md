@@ -1,4 +1,4 @@
-# Assignment 1 | COMP2112
+# Assignment 2 | COMP2112
 
 **Live Site:** [Visit Portfolio](https://portfolio-1-8eewgffgc-tineils-projects.vercel.app/)
 
