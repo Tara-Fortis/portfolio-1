@@ -276,6 +276,9 @@ fieldset {
   width: 100%;
   padding: 0 0.75rem;
   margin-bottom: 1.5rem;
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 
 .confirm {
