@@ -87,11 +87,13 @@ nav {
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
+  list-style: none;
 }
 
 .navbar>li,
 .footbar>li {
   padding: 0 0.25rem;
+  list-style: none;
 }
 
 
