@@ -381,3 +381,29 @@ fieldset {
   color: #374151;
   font-size: 1rem;
 }
+
+/* Remove underline from navbar and footer links */
+.navbar a,
+.footbar a {
+  text-decoration: none;
+}
+
+/* Ensure form and fieldset fit inside the grid */
+form {
+  max-width: 100%;
+}
+
+fieldset {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Make grid layout responsive */
+@media (max-width: 800px) {
+  .grid-layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "form"
+      "confirm";
+  }
+}
