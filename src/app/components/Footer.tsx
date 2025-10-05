@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function Footer() {
     return (
-        <footer>
-            <ul className="footbar">
+        <footer className="footbar">
+            <ul className="flex-row">
                 <li>
                     <Image
                         src="/name.svg"
@@ -15,17 +15,26 @@ export default function Footer() {
                     />
                 </li>
                 <li>
-                    <Link href="https://www.linkedin.com/in/tineil-armstrong-b270957b/">
+                    <Link
+                        href="https://www.linkedin.com/in/tineil-armstrong-b270957b/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         <Image
                             src="/In.png"
                             alt="linkedin logo"
                             className="lnlogo"
                             width={2212}
-                            height={540} />
+                            height={540}
+                        />
                     </Link>
                 </li>
                 <li>
-                    <Link href="https://github.com/Tara-Fortis">
+                    <Link
+                        href="https://github.com/Tara-Fortis"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         <Image
                             src="/git.svg"
                             alt="github logo"
@@ -35,6 +44,9 @@ export default function Footer() {
                     </Link>
                 </li>
             </ul>
+            <div className="copyright">
+                &copy; 2025 Tineil Armstrong. All rights reserved.
+            </div>
         </footer>
     );
 }

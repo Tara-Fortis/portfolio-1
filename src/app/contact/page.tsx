@@ -34,7 +34,7 @@ export default function Contact() {
         redirect('/bio', RedirectType.replace);
     }
     return (
-        <main className="grid-lyt">
+        <main className="grid-layout">
             <form action="#" method="post" className=" w-full max-w-lg" onSubmit={handleSubmit}>
                 <legend>
                     <h1>Contact Information</h1>
@@ -59,13 +59,19 @@ export default function Contact() {
             </form>
             {/* Show confirmation message if it exists */}
             {confirmation && (
-                <>
-                    <aside className="confirm">
-                        <p className="message">Thank you {name}! Please click confirm to send your message.:<br />{confirmation}</p>
+                <aside className="confirm">
+                    <div className="message-box">
+                        <h2 className="message-heading">Message Preview</h2>
+                        <p className="message">
+                            <strong>Thank you, {name}!</strong><br />
+                            Please click <em>Confirm</em> to send your message:
+                        </p>
+                        <blockquote className="confirmation-text">{confirmation}</blockquote>
                         <button type="button" onClick={bioPage}>Confirm</button>
-                    </aside>
-                </>
+                    </div>
+                </aside>
             )}
+
         </main>
     );
 }

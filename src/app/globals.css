@@ -1,32 +1,14 @@
-@import "tailwindcss";
-
+/* Theme */
 :root {
-  --background: #ffffff;
+  --background: #d9cbdb;
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-/* Base Styles */
+/* Base Layout */
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-}
-
-body {
   min-height: 100vh;
   margin: 0;
   display: grid;
@@ -37,9 +19,10 @@ main {
   padding: 25px;
 }
 
+/* Link Styles */
 .link:link,
 .link:visited {
-  color: #d3d3d3
+  color: #d3d3d3;
 }
 
 .link:hover,
@@ -51,6 +34,7 @@ main {
   color: #800080;
 }
 
+/* Utility Containers */
 .container {
   display: flex;
   flex-direction: row;
@@ -60,43 +44,9 @@ main {
   text-align: center;
 }
 
-.about:link {
-  color: #211431;
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-.about:visited {
-  color: #5e4b56;
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-.about:hover,
-.about:focus {
-  color: #374151;
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-.about:active {
-  color: purple;
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-.project-image {
-  padding: 0.5rem;
-  width: 500px;
-  height: autox;
-}
-
-.project {
-  display: grid;
-}
-
-.project>li {
-  grid-area: 1fr;
+.flex-row {
+  display: flex;
+  flex-direction: row;
 }
 
 /* Typography */
@@ -109,9 +59,9 @@ h2 {
 
 h3 {
   font-weight: bold;
+  margin-top: 1em;
   margin-bottom: 5px;
   font-size: large;
-  margin-top: 1em;
 }
 
 .brand {
@@ -144,22 +94,94 @@ nav {
 /* Footer */
 .footbar {
   background-color: #211431;
-  color: #fff;
+  color: #d3d3d3;
   display: flex;
   justify-content: center;
   padding: 0.5rem;
   width: 100%;
 }
 
-/* Media and logos*/
+/* Bio Page Styles */
+#bio {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  color: #171717;
+}
+
+/* Header Section */
+.bio-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.bio-photo {
+  border-radius: 9999px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.145);
+  margin-bottom: 1.5rem;
+}
+
+/* Typography */
+#bio h1 {
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+#bio h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+#bio p {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+/* Mission Section */
+.bio-mission {
+  margin-bottom: 2.5rem;
+}
+
+/* About Page Links */
+.about:link,
+.about:visited {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.about:link {
+  color: #211431;
+}
+
+.about:visited {
+  color: #5e4b56;
+}
+
+.about:hover,
+.about:focus {
+  color: #374151;
+}
+
+.about:active {
+  color: purple;
+}
+
+/* Media and Logos */
 .photo {
   width: 200px;
   height: auto;
 }
 
 .lnlogo {
-  width: auto;
   height: 2rem;
+  width: auto;
   padding: 0.25rem;
 }
 
@@ -167,44 +189,43 @@ nav {
 button {
   background-color: #5e4b56;
   color: #ffffff;
-  cursor: pointer;
   font-weight: 700;
   border-radius: 0.25rem;
   padding: 0.5rem 1rem;
+  cursor: pointer;
+  outline: none;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1),
     0 1px 2px rgba(0, 0, 0, 0.06);
-  outline: none;
   transition: background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 button:hover {
   background-color: #a690a4;
-  cursor: pointer;
 }
 
 button:focus {
   box-shadow: 0 0 0 3px #a690a48d;
 }
 
-/* Form */
+/* Contact Form */
 .custom-label {
   display: block;
-  letter-spacing: 0.05em;
-  color: #374151;
   font-size: 0.75rem;
   font-weight: 700;
+  letter-spacing: 0.05em;
   margin-bottom: 0.5rem;
+  color: #374151;
 }
 
 .custom-input {
   appearance: none;
   display: block;
   width: 100%;
+  padding: 0.75rem 1rem;
   background-color: #e5e7eb;
   color: #374151;
   border: 1px solid #d3d3d3;
   border-radius: 0.25rem;
-  padding: 0.75rem 1rem;
   line-height: 1.25;
   outline: none;
 }
@@ -215,29 +236,148 @@ button:focus {
   box-shadow: 0 0 0 3px rgba(107, 114, 128, 0.3);
 }
 
-.grid-lyt{
+/* Grid Layout for Contact Page */
+.grid-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto 1fr auto;
-  grid-template-areas: 
+  grid-template-areas:
     "form confirm"
     "form confirm";
   column-gap: 1rem;
 }
 
-
 fieldset {
   grid-area: form;
+  width: 100%;
+  padding: 0 0.75rem;
+  margin-bottom: 1.5rem;
 }
+
 .confirm {
   grid-area: confirm;
+  padding: 1rem;
+  background-color: #f3f4f6;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  color: #211431;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
+/* Confirmation Message Styling */
+.message-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 
+.message-heading {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  color: #5e4b56;
+}
 
-fieldset {
+.message {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.confirmation-text {
+  background-color: #fff;
+  border-left: 4px solid #5e4b56;
+  padding: 0.75rem 1rem;
+  font-style: italic;
+  color: #374151;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Projects Page */
+.projects-container {
+  padding: 2rem;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+}
+
+.project-card {
+  background-color: rgba(250, 250, 250, 0.5);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-image {
   width: 100%;
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-  margin-bottom: 1.5rem;
+  height: auto;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+/* Skills Section Container */
+#skills {
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Section Heading */
+#skills h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+/* Grid Layout for Skill Cards */
+#skills ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-items: center;
+}
+
+/* Individual Skill Card */
+.skill {
+  display: flex;
+  flex-direction: column;
+  /* Stack icon above label */
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  width: 100%;
+  max-width: 160px;
+  background-color: rgba(250, 250, 250, 0.5);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Skill Icon and Label */
+.skill img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 0.5rem;
+}
+
+.skill span {
+  font-weight: 600;
+  color: #374151;
+  font-size: 1rem;
 }
