@@ -1,6 +1,6 @@
 # Assignment 2 | COMP2112
 
-**Live Site:** [Visit Portfolio](https://portfolio-1-8eewgffgc-tineils-projects.vercel.app/)
+**Live Site:** [Visit Portfolio](https://portfolio-1-hazel-xi-17.vercel.app/)
 
 ## Project Overview
 
