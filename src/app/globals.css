@@ -71,6 +71,13 @@ h3 {
 }
 
 /* Navigation */
+/* Remove underline from navbar and footer links */
+.navbar a,
+.footbar a {
+  text-decoration: none;
+}
+
+
 nav {
   background-color: #211431;
   color: #fff;
@@ -247,6 +254,16 @@ button:focus {
   column-gap: 1rem;
 }
 
+/* Ensure form and fieldset fit inside the grid */
+form {
+  max-width: 100%;
+}
+
+fieldset {
+  width: 100%;
+  box-sizing: border-box;
+}
+
 fieldset {
   grid-area: form;
   width: 100%;
@@ -382,21 +399,7 @@ fieldset {
   font-size: 1rem;
 }
 
-/* Remove underline from navbar and footer links */
-.navbar a,
-.footbar a {
-  text-decoration: none;
-}
 
-/* Ensure form and fieldset fit inside the grid */
-form {
-  max-width: 100%;
-}
-
-fieldset {
-  width: 100%;
-  box-sizing: border-box;
-}
 
 /* Make grid layout responsive */
 @media (max-width: 800px) {
