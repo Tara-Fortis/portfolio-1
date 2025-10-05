@@ -264,14 +264,14 @@ button:focus {
 /* Ensure form and fieldset fit inside the grid */
 form {
   max-width: 100%;
+  background: transparent;
+  box-shadow: none;
+  border: none;
 }
 
 fieldset {
   width: 100%;
   box-sizing: border-box;
-}
-
-fieldset {
   grid-area: form;
   width: 100%;
   padding: 0 0.75rem;
