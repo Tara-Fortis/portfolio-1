@@ -74,8 +74,8 @@ h3 {
 /* Remove underline from navbar and footer links */
 .navbar a,
 .footbar a {
-  text-decoration: none;
-}
+  text-decoration: none !important;
+} 
 
 
 nav {
