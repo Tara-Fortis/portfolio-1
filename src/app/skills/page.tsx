@@ -13,7 +13,7 @@ const SkillsPage = () => {
                     { src: "/c-sharp.png", alt: "C# icon", label: "C#", size: 64 },
                     { src: "/net-framework.svg", alt: ".NET Framework icon", label: "ASP.NET Core" },
                     { src: "/nextjs.png", alt: "Next.js icon", label: "Next.js" },
-                    { src: "/git.svg", alt: "Git icon", label: "Git" },
+                    { src: "/GitHub_Invertocat_Black.png", alt: "Git icon", label: "Git" },
                 ].map(({ src, alt, label, size = 48 }) => (
                     <li key={label} className="skill">
                         <Image src={src} alt={alt} width={size} height={size} />

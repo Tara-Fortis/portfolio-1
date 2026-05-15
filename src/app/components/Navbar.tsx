@@ -39,10 +39,6 @@ export default function Navbar() {
                         </Link>
                     </li>
                 ))}
-                {/* <li><Link href="/bio" className="link">About</Link></li>
-                <li><Link href="/contact" className="link">Contact</Link></li>
-                <li><Link href="/projects" className="link">Projects</Link></li>
-                <li><Link href="/skills" className="link">Skills</Link></li> */}
             </ul>
         </nav>
     );

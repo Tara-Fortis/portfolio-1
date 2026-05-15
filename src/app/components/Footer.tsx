@@ -4,16 +4,10 @@ import Image from "next/image";
 export default function Footer() {
     return (
         <footer className="footbar">
+            <div className="copyright">
+                &copy; 2025 Tineil Armstrong. All rights reserved.
+            </div>
             <ul className="flex-row">
-                <li>
-                    <Image
-                        src="/name.svg"
-                        alt="stylized text that reads: tinedev"
-                        width={300}
-                        height={51}
-                        className="lnlogo"
-                    />
-                </li>
                 <li>
                     <Link
                         href="https://www.linkedin.com/in/tineil-armstrong-b270957b/"
@@ -36,7 +30,7 @@ export default function Footer() {
                         rel="noopener noreferrer"
                     >
                         <Image
-                            src="/git.svg"
+                            src="/GitHub_Invertocat_White.png"
                             alt="github logo"
                             className="lnlogo"
                             width={2212}
@@ -44,9 +38,6 @@ export default function Footer() {
                     </Link>
                 </li>
             </ul>
-            <div className="copyright">
-                &copy; 2025 Tineil Armstrong. All rights reserved.
-            </div>
         </footer>
     );
 }

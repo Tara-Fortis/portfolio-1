@@ -14,8 +14,9 @@ const BioPage = () => {
                 />
                 <h1>About Me</h1>
                 <p>
-                    I&apos;m a student webdeveloper currently studying Interactive Media Design at Georgian College.
-                    I&apos;m passionate about building dynamic, user-centred web experiences that blend clean code with thoughtful design.
+                    I recently graduated from the Interactive Media Design Program from Georgian College. I am currently seeking work.</p>
+                <p>
+                    I am passionate about building dynamic, user-centred web experiences that blend clean code with thoughtful design.
                 </p>
             </section>
             <section className="bio-mission">

@@ -23,6 +23,7 @@ main {
 .link:link,
 .link:visited {
   color: #d3d3d3;
+  text-decoration: none;
 }
 
 .link:hover,
@@ -384,6 +385,7 @@ fieldset {
 .skill {
   display: flex;
   flex-direction: column;
+
   /* Stack icon above label */
   align-items: center;
   justify-content: center;
@@ -408,8 +410,6 @@ fieldset {
   color: #374151;
   font-size: 1rem;
 }
-
-
 
 /* Make grid layout responsive */
 @media (max-width: 800px) {
