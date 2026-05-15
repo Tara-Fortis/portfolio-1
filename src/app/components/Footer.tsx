@@ -4,9 +4,6 @@ import Image from "next/image";
 export default function Footer() {
     return (
         <footer className="footbar">
-            <div className="copyright">
-                &copy; 2025 Tineil Armstrong. All rights reserved.
-            </div>
             <ul className="flex-row">
                 <li>
                     <Link
@@ -38,6 +35,10 @@ export default function Footer() {
                     </Link>
                 </li>
             </ul>
+            <br />
+            <div className="copyright">
+                &copy; 2025 Tineil Armstrong. All rights reserved.
+            </div>
         </footer>
     );
 }

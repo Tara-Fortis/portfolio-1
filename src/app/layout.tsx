@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import "./globals.css";
+// bootstrap imports
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './globals.css';
 
 // shared NavBar component
-import Navbar from "./components/Navbar";
+import Header from "./components/Header";
 
 // shared Footer component
 import Footer from "./components/Footer";
@@ -24,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Navbar />
+        <Header />
         {children}
         <Footer />
       </body>
