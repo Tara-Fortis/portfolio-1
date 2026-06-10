@@ -13,38 +13,35 @@ export default function Header() {
     const pathname = usePathname();
     // Nav links and their paths and labels
     const navLinks = [
-        { href: "bio", label: "About" },
-        { href: "contact", label: "Contact" },
         { href: "projects", label: "Projects" },
-        { href: "skills", label: "Skills" }
+        { href: "skills", label: "Skills" },
+        { href: "contact", label: "Contact" }
     ];
     return (
         <Navbar expand="lg" className="navbar-dark">
             <Container>
-                <Navbar.Brand href="/">
+                <Navbar.Brand href="/" className="me-auto">
                     <Image
                         src="/tinedev.svg"
                         width={300}
-                        height={47}
+                        height={40}
                         alt="Brand logo, a stylized outline representing a brain with text that spells 'tinedev'"
                         priority // load image first
                     />
                 </Navbar.Brand>
                 <Navbar.Toggle />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto" >
-                        <Nav className="navbar-nav me-auto">
-                            {navLinks.map(({ href, label }) => (
-                                <li key={href} className="nav-item">
-                                    {/* If current route matches Link, apply 'active' class */}
-                                    <Link
-                                        href={href}
-                                        className={`nav-link ${pathname === href ? "active" : ""}`}
-                                    >{label}
-                                    </Link>
-                                </li>
-                            ))}
-                        </Nav>
+                    <Nav className="ms-auto text-end">
+                        {navLinks.map(({ href, label }) => (
+                            <Nav.Item key={href} className="nav-item">
+                                {/* If current route matches Link, apply 'active' class */}
+                                <Link
+                                    href={href}
+                                    className={`nav-link ${pathname === href ? "active" : ""}`}
+                                >{label}
+                                </Link>
+                            </Nav.Item>
+                        ))}
                     </Nav>
                 </Navbar.Collapse>
             </Container>

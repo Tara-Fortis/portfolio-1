@@ -15,14 +15,13 @@ export default function Home() {
           height={211}
           className="bio-photo"
         />
-        <h1>Welcome!</h1>
+        <h1>Hello!</h1>
         <p>
-          I&apos;m Tineil Armstrong, a passionate web developer. Explore my work, dive into my projects,
-          and get to know me better on the <Link href="/bio" className="about">about</Link> page.
+          I&apos;m Tineil Armstrong, a passionate web developer. Check out my projects, look at my skills, or get in touch with me! Thank you for checking out my site.
         </p>
       </section>
       <section className="bio-mission">
-        <h2>Mission</h2>
+        <h2 className="text-center">Mission</h2>
         <p>
           My mission is to build exceptional websites that are fast, reliable, accessible, and easy to use.
           I focus on creating dynamic, user-centered experiences that blend clean code with thoughtful design.
