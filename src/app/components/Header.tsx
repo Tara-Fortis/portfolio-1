@@ -22,7 +22,7 @@ export default function Header() {
             <Container>
                 <Navbar.Brand href="/" className="me-auto">
                     <Image
-                        src="/tinedev.svg"
+                        src="/name.svg"
                         width={300}
                         height={40}
                         alt="Brand logo, a stylized outline representing a brain with text that spells 'tinedev'"
