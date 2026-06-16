@@ -1,41 +1,50 @@
-import React from 'react';
-import Image from 'next/image';
+'use client';
 
-const SkillsPage = () => {
-    return (
-        <main id="skills">
-            <h1>My Skills</h1>
-            <ul>
-                {[
-                    { src: "/html.svg", alt: "HTML icon", label: "HTML" },
-                    { src: "/css.svg", alt: "CSS icon", label: "CSS" },
-                    { src: "/javascript.svg", alt: "JavaScript icon", label: "JavaScript" },
-                    { src: "/c-sharp.png", alt: "C# icon", label: "C#", size: 64 },
-                    { src: "/net-framework.svg", alt: ".NET Framework icon", label: "ASP.NET Core" },
-                    { src: "/nextjs.png", alt: "Next.js icon", label: "Next.js" },
-                    { src: "/GitHub_Invertocat_Black.png", alt: "GitHub icon", label: "GitHub" },
-                    { src: "/angular_gradient.png", alt: "Angular icon", label: "Angular" },
-                    { src: "/react-icon.svg", alt: "React icon", label: "React" },
-                    { src: "/ts-logo-256.svg", alt: "TypeScript icon", label: "TypeScript" },
-                    { src: "/MongoDB_Logomark_ForestGreen.svg", alt: "MongoDB icon", label: "MongoDB" },
-                    { src: "/logo-mysql.png", alt: "MySQL icon", label: "MySQL" },
-                    { src: "/php-logo.svg", alt: "PHP icon", label: "PHP" },
-                    { src: "/WordPress.png", alt: "WordPress icon", label: "WordPress" },
-                    { src: "/logos_figma.png", alt: "Figma icon", label: "Figma" },
-                    { src: "/Adobe_Photoshop.png", alt: "Adobe Photoshop icon", label: "Photoshop" },
-                    { src: "/Adobe_Illustrator.png", alt: "Adobe Illustrator icon", label: "Illustrator" },
-                ].map(({ src, alt, label, size = 48 }) => (
-                    <li key={label} className="skill">
-                        <Image src={src} alt={alt} width={size} height={size} />
-                        <span>{label}</span>
-                    </li>
-                ))}
-            </ul>
-        </main>
-    );
-};
+import { Container, Row, Col, Card } from 'react-bootstrap';
 
-export default SkillsPage;
-
-
-// map() https://legacy.reactjs.org/docs/lists-and-keys.html
+const skillCategories = [
+  {
+    title: "Design & Accessibility",
+    skills: ["UX/UI Design", "Mobile-First Prototyping", "AODA / WCAG Compliance", "Figma", "Adobe Photoshop", "Adobe Illustrator"]
+  },
+  {
+    title: "Frontend Engineering",
+    skills: ["Angular", "React", "Next.js", "TypeScript", "JavaScript (ES6+)", "HTML5 / CSS3", "Bootstrap & Tailwind"]
+  },
+  {
+    title: "Backend & Databases",
+    skills: ["Node.js", "Express.js", "C# (ASP.NET Core)", "PHP", "SQL Server / MySQL", "MongoDB"]
+  }
+];
+export default function Skills() {
+  return (
+    <main className="py-5">
+      <Container>
+        <h1 className="mb-2">Technical Toolkit</h1>
+        <p className="text-muted mb-5">The programming languages, frameworks, and design methodologies I use to build digital experiences.</p>
+        
+        <Row className="g-4">
+          {skillCategories.map((category) => (
+            <Col xs={12} md={4} key={category.title}>
+              <Card className="h-100 border-0 bg-light p-3">
+                <Card.Body>
+                  <Card.Title className="fw-bold h5 mb-3 pb-2 border-bottom border-dark-subtle">
+                    {category.title}
+                  </Card.Title>
+                  <div className="d-flex flex-column gap-2">
+                    {category.skills.map((skill) => (
+                      <div key={skill} className="d-flex align-items-center gap-2 py-1">
+                        {/* A clean, consistent bullet point style */}
+                        <span className="text-dark fw-medium">{skill}</span>
+                      </div>
+                    ))}
+                  </div>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </Container>
+    </main>
+  );
+}
