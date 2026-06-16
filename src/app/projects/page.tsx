@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 
 const ProjectsPage = () => {
+    
     return (
         <main className="projects-container">
             <h1 className="page-title">My Projects</h1>
