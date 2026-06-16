@@ -1,12 +1,13 @@
 'use client';
 
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import * as React from 'react';
 import { Container } from "react-bootstrap";
 import Nav from "react-bootstrap/Nav";
 import { Navbar } from "react-bootstrap";
+import Button from 'react-bootstrap/Button';
+
 
 export default function Header() {
     // get the current pathname
@@ -37,6 +38,7 @@ export default function Header() {
                             </Nav.Item>
                         ))}
                     </Nav>
+                    <Button>Download Resume</Button>
                 </Navbar.Collapse>
             </Container>
         </Navbar>
