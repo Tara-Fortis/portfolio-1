@@ -21,13 +21,7 @@ export default function Header() {
         <Navbar expand="lg" className="navbar-dark">
             <Container>
                 <Navbar.Brand href="/" className="me-auto">
-                    <Image
-                        src="/name.svg"
-                        width={300}
-                        height={40}
-                        alt="Brand logo, a stylized outline representing a brain with text that spells 'tinedev'"
-                        priority // load image first
-                    />
+                    <h1>TINEIL ARMSTRONG</h1>
                 </Navbar.Brand>
                 <Navbar.Toggle />
                 <Navbar.Collapse id="basic-navbar-nav">

@@ -31,11 +31,11 @@ export default function Contact() {
     }
     // redirect to bio page
     const bioPage = () => {
-        redirect('/bio', RedirectType.replace);
+        redirect('/', RedirectType.replace);
     }
     return (
         <main className="grid-layout">
-            <form action="#" method="post" className=" w-full max-w-lg" onSubmit={handleSubmit}>
+            <form action="#" method="post" className=" w-full max-w-lg form-floating" onSubmit={handleSubmit}>
                 <legend>
                     <h1>Contact Information</h1>
                 </legend>
